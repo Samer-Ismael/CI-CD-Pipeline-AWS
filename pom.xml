@@ -83,6 +83,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>server</finalName>
 	</build>
 
 	<profiles>
@@ -106,7 +107,7 @@
 						</executions>
 					</plugin>
 				</plugins>
-				<finalName>server</finalName>
+
 			</build>
 		</profile>
 	</profiles>
