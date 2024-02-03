@@ -106,6 +106,7 @@
 						</executions>
 					</plugin>
 				</plugins>
+				<finalName>server</finalName>
 			</build>
 		</profile>
 	</profiles>
