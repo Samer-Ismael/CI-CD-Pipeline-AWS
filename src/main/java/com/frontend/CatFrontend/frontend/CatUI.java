@@ -12,8 +12,6 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.StreamResource;
-import com.vaadin.flow.server.VaadinService;
-import com.vaadin.flow.server.VaadinServletService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 
@@ -30,11 +28,6 @@ public class CatUI extends VerticalLayout {
     private final TextField name = new TextField("Name");
     private final TextField color = new TextField("Color");
     private final TextField age = new TextField("Age");
-
-    private final Button addCatButton = new Button("Add Cat");
-    private final Button updateCatButton = new Button("Update Cat");
-    private final Button deleteCatButton = new Button("Delete Cat");
-    private final Button swaggerButton = new Button("Swagger Documentation");
 
 
     @Autowired
@@ -55,6 +48,10 @@ public class CatUI extends VerticalLayout {
         HorizontalLayout inputLayout = new HorizontalLayout(name, color, age);
         inputLayout.setSpacing(true);
 
+        Button addCatButton = new Button("Add Cat");
+        Button updateCatButton = new Button("Update Cat");
+        Button deleteCatButton = new Button("Delete Cat");
+        Button swaggerButton = new Button("Swagger Documentation");
         HorizontalLayout buttonLayout = new HorizontalLayout(addCatButton, updateCatButton, deleteCatButton, swaggerButton);
         buttonLayout.setSpacing(true);
 
@@ -76,8 +73,6 @@ public class CatUI extends VerticalLayout {
         UI.getCurrent().getPage().setLocation("/swagger-ui/index.html");
 
     }
-
-
 
     private void addCat() {
        try {
@@ -132,7 +127,7 @@ public class CatUI extends VerticalLayout {
             catGrid.setItems(cats);
             catGrid.deselectAll();
         } else {
-            Notification.show("Error fetching cat data: " + responseEntity.getStatusCode().toString());
+            Notification.show("Error fetching cat data: " + responseEntity.getStatusCode());
         }
     }
 }
