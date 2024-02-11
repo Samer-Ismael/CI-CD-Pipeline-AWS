@@ -1,9 +1,7 @@
 package com.frontend.CatFrontend.controller;
 
-
 import com.frontend.CatFrontend.entitiy.Cat;
 import com.frontend.CatFrontend.repo.CatRepo;
-import com.vaadin.flow.component.UI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +14,6 @@ public class CatController {
 
     @Autowired
     private CatRepo catRepo;
-
 
     public CatController(CatRepo catRepo) {
         this.catRepo = catRepo;

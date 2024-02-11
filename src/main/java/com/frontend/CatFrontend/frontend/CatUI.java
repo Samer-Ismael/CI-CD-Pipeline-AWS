@@ -87,9 +87,9 @@ public class CatUI extends VerticalLayout {
 
            catController.addCat(cat);
            refreshGrid();
-           Notification.show("Cat added successfully");
+           Notification.show("Cat added successfully", 3000, Notification.Position.TOP_CENTER);
        } catch (NumberFormatException e) {
-           Notification.show("Something went wrong.");
+           Notification.show("Something went wrong.", 3000, Notification.Position.TOP_CENTER);
        }
     }
 
@@ -102,9 +102,9 @@ public class CatUI extends VerticalLayout {
             selectedCat.setAge(Integer.parseInt(age.getValue()));
             catController.updateCat(selectedCat.getId(), selectedCat);
             refreshGrid();
-            Notification.show("Cat updated successfully");
+            Notification.show("Cat updated successfully",3000, Notification.Position.TOP_CENTER);
         } else {
-            Notification.show("Select a cat to update");
+            Notification.show("Select a cat to update",3000, Notification.Position.TOP_CENTER);
         }
     }
 
@@ -113,9 +113,9 @@ public class CatUI extends VerticalLayout {
         if (selectedCat != null) {
             catController.deleteCat(selectedCat.getId());
             refreshGrid();
-            Notification.show("Cat deleted successfully");
+            Notification.show("Cat deleted successfully",3000, Notification.Position.TOP_CENTER);
         } else {
-            Notification.show("Select a cat to delete");
+            Notification.show("Select a cat to delete",3000, Notification.Position.TOP_CENTER);
         }
     }
 

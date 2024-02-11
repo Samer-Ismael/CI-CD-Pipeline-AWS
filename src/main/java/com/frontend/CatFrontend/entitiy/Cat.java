@@ -16,6 +16,10 @@ public class Cat {
     String color;
     int age;
 
+    public Cat(String name, String color, int age) {
+
+    }
+
     @Override
     public String toString() {
         return "Cat{id=" + id + ", name='" + name + "', color='" + color + "', age=" + age + '}';
