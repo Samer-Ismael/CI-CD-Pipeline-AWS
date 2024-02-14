@@ -18,6 +18,7 @@ phases:
   post_build:
     commands:
       - echo "Deploying..." # Proceed to deployment if tests pass
+      - echo "Deployment complete!"
 
 # Here I just give my jar file a name and discard the paths
 # I change the name of the jar file to server.jar in pom.xml file
