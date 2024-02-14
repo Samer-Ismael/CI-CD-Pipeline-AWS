@@ -12,7 +12,6 @@ phases:
   post_build:
     commands:
       - echo "Deploying..." # Proceed to deployment if tests pass
-      - cp target/server.jar /path/to/deployment/directory
       - echo "Deployment complete!"
 
 artifacts:
