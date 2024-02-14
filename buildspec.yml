@@ -19,12 +19,6 @@ phases:
     commands:
       - echo "Deploying..." # Proceed to deployment if tests pass
 
-  deploy:
-    commands:
-      - echo "Deploying to local server..."
-      - cp target/server.jar /path/to/deployment/directory
-      - echo "Deployment complete!"
-
 # Here I just give my jar file a name and discard the paths
 # I change the name of the jar file to server.jar in pom.xml file
 # so that I can easily reference it here
