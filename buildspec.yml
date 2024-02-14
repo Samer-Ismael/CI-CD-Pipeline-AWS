@@ -1,4 +1,3 @@
-
 # the version of the build spec
 version: 0.2
 
@@ -11,12 +10,18 @@ phases:
       - echo "Build phase"
       - mvn clean package
 
-# Here i just print a message to indicate that the build has completed
-# I can add some notifications here to notify me when the build has completed
-# but im not going to do that for now
-  post_build:
+  test:
+  commands:
+    - echo "Test phase"
+    - mvn test # Run your unit tests with Maven
+    - echo "Unit tests passed" # if the tests pass, proceed to deployment
+  post_success:
+    - echo "Deploying..." # Proceed to deployment if tests pass
+  deploy:
     commands:
-      - echo "Build completed"
+      - echo "Deploying to local server..."
+      - cp target/server.jar /path/to/deployment/directory
+      - echo "Deployment complete!"
 
 # Here i just give my jar file a name and discard the paths
 # I chnge the name of the jar file to server.jar in pom.xml file
