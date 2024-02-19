@@ -5,9 +5,7 @@ phases:
     commands:
       - echo "Build phase"
       - mvn clean package
-      - echo "Test phase"
-      - mvn test
-      - echo "Unit tests passed"
+
 
   test:
     commands:
