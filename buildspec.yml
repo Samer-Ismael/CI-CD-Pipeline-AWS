@@ -10,14 +10,11 @@ phases:
       - echo "Build phase"
       - mvn clean package
 
-  test:
+  post_build:
     commands:
       - echo "Test phase"
       - mvn test
       - echo "Unit tests passed"
-
-  post_build:
-    commands:
       - echo "Deploying..."
       - echo "Deployment complete!"
 
