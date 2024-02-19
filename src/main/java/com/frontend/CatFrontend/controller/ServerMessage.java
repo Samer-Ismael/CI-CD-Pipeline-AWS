@@ -10,7 +10,7 @@ public class ServerMessage {
 
     @GetMapping("")
     public String getServerMessage() {
-        return "This is text from the server, for testing AWS pipeline.";
+        return "This is for showing Marcus that it works!";
     }
 
 }
