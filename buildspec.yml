@@ -6,12 +6,18 @@ phases:
       - echo "Build phase"
       - mvn clean package
       - echo "Test phase"
-      - mvn test # Run your unit tests with Maven
-      - echo "Unit tests passed" # if the tests pass, proceed to deployment
+      - mvn test
+      - echo "Unit tests passed"
+
+  test:
+    commands:
+      - echo "Test phase"
+      - mvn test
+      - echo "Unit tests passed"
 
   post_build:
     commands:
-      - echo "Deploying..." # Proceed to deployment if tests pass
+      - echo "Deploying..."
       - echo "Deployment complete!"
 
 artifacts:
