@@ -10,7 +10,7 @@ public class ServerMessage {
 
     @GetMapping("")
     public String getServerMessage() {
-        return "This is the server message!";
+        return "This is to show Marcus that it works!";
     }
 
 }
