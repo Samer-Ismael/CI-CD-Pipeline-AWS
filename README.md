@@ -16,7 +16,7 @@ Welcome to the Cat Database app! This project is a CD/CI Pipeline in Java, consi
 To use this API, follow these steps:
 
 - **Frontend**: [Cat Database Frontend](https://github.com/Samer-Ismael/CatDatabaseFrontend)
-- **Server**: [Swagger UI](http://samer.eu-north-1.elasticbeanstalk.com/swagger-ui/index.html)
+- **API documentation**: [Swagger UI](http://samer.eu-north-1.elasticbeanstalk.com/swagger-ui/index.html)
 
 1. Start the frontend app on your local machine or open your browser to `localhost:8080`.
 2. Use the provided endpoints to add, edit, or delete cats from the database.
